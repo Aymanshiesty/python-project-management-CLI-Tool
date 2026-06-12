@@ -1,4 +1,4 @@
-#  Multi-User Project Tracker CLI Suite
+#  PROJECT MANAGEMENT CLI TOOL
 
 An enterprise-grade Command-Line Tool built in Python to track structural user allocations, milestones, and task matrices.
 
@@ -17,25 +17,27 @@ pipenv run pytest
 
 
 # Command Execution Examples
+**NOTICE: The (###) is where a certain input is supposed to be.**
 ## Register a New User:
 ```Bash
-pipenv run python main.py add-user --name "Alice" --email "alice@dev.com"
+pipenv run python main.py add-user --name "###" --email "###"
 ```
 
 ## Bind a New Project:
 
 ```Bash
-pipenv run python main.py add-project --title "API Gateway" --user "Alice" --due "2026-11-20"
+pipenv run python main.py add-project --title "###" --user "###" --due "year-month-day"
 ```
 
 ## Inject a Dependent Task:
 
 ```Bash
-pipenv run python main.py add-task --project "API Gateway" --title "Configure CORS Policies" --assignee "Alice"
+pipenv run python main.py add-task --project "###" --title "###" --assignee "###"
 ```
 
 ## Flag a Task as Complete:
 
+**N/B: *--id "put number here"***
 ```Bash
 pipenv run python main.py complete-task --id "1"
 ```

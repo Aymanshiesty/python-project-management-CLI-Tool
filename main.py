@@ -13,7 +13,7 @@ from rich.table import Table
 console = Console()
 
 def run_cli():
-    parser = argparse.ArgumentParser(description="🚀 Multi-User Project Tracker CLI Suite")
+    parser = argparse.ArgumentParser(description="Project Tracker CLI Tool")
     subparsers = parser.add_subparsers(dest="command", help="Operational Subcommands")
 
     # --- SUBCOMMAND: add-user ---
@@ -57,7 +57,7 @@ def run_cli():
             sys.exit(1)
         db["users"][args.name] = User(args.name, args.email)
         save_database(db)
-        console.print(f"[bold green]✔ Success:[/bold green] Account created for {args.name}.")
+        console.print(f"[bold green]Success:[/bold green] Account created for {args.name}.")
 
     elif args.command == "list-users":
         if not db["users"]:
@@ -79,7 +79,7 @@ def run_cli():
             sys.exit(1)
         db["projects"][args.title] = Project(args.title, args.desc, args.due, args.user)
         save_database(db)
-        console.print(f"[bold green]✔ Success:[/bold green] Project '{args.title}' bound to user '{args.user}'.")
+        console.print(f"[bold green] Success:[/bold green] Project '{args.title}' bound to user '{args.user}'.")
 
     elif args.command == "list-projects":
         target_projects = db["projects"].values()
@@ -91,7 +91,7 @@ def run_cli():
             return
             
         table = Table(title="Project Matrix Board")
-        table.add_column("Project Scope Title", style="green")
+        table.add_column("Project Scope Title", style="white")
         table.add_column("Target Milestone", style="bold white")
         table.add_column("Owner Username", style="blue")
         for p in target_projects:
@@ -109,7 +109,7 @@ def run_cli():
         next_id = str(len(db["tasks"]) + 1)
         db["tasks"][next_id] = Task(next_id, args.project, args.title, "Pending", args.assignee)
         save_database(db)
-        console.print(f"[bold green]✔ Success:[/bold green] Task #{next_id} registered into target container '{args.project}'.")
+        console.print(f"[bold green]Success:[/bold green] Task #{next_id} registered into target container '{args.project}'.")
 
     elif args.command == "complete-task":
         if args.id not in db["tasks"]:
@@ -117,7 +117,7 @@ def run_cli():
             sys.exit(1)
         db["tasks"][args.id].mark_complete()
         save_database(db)
-        console.print(f"[bold green]✔ Success:[/bold green] Task #{args.id} updated to complete status.")
+        console.print(f"[bold green]Success:[/bold green] Task #{args.id} updated to complete status.")
         
     else:
         parser.print_help()

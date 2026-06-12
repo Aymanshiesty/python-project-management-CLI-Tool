@@ -1,25 +1,36 @@
 {
   "users": {
-    "Alice": {
-      "name": "Alice",
-      "email": "alice@dev.com"
+    "ahmed": {
+      "name": "Ayman",
+      "email": "Ayman@dev.com"
+    },
+    "ayman": {
+      "name": "Ayman",
+      "email": "Ayman@dev.com"
     }
   },
   "projects": {
     "API Gateway": {
-      "title": "API Gateway",
+      "title": "Python Project",
       "description": "No description provided.",
-      "due_date": "2026-11-20",
-      "owner_name": "Alice"
+      "due_date": "2026-10-10",
+      "owner_name": "Ayman"
     }
   },
   "tasks": {
     "1": {
       "task_id": "1",
-      "project_title": "API Gateway",
+      "project_title": "Python Project",
       "title": "Configure CORS Policies",
       "status": "Complete",
-      "assigned_to": "Alice"
+      "assigned_to": "Ayman"
+    },
+    "2": {
+      "task_id": "2",
+      "project_title": "Python Project",
+      "title": "Configure CORS Policies",
+      "status": "Pending",
+      "assigned_to": "Ayman"
     }
   }
 }

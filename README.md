@@ -1,4 +1,5 @@
-Project Tracker CLI 
+#  Multi-User Project Tracker CLI Suite
+
 An enterprise-grade Command-Line Tool built in Python to track structural user allocations, milestones, and task matrices.
 
 Installation and Activation Protocol
@@ -6,14 +7,30 @@ Initialize Virtual Container Matrix via Pipenv:
 pipenv install --dev
 Execute Automated Verification Tests:
 pipenv run pytest
-Command Execution Examples
-Register a New User:
+```
+
+
+# Command Execution Examples
+## Register a New User:
+```Bash
 pipenv run python main.py add-user --name "Alice" --email "alice@dev.com"
-Bind a New Project:
+```
+
+## Bind a New Project:
+
+```Bash
 pipenv run python main.py add-project --title "API Gateway" --user "Alice" --due "2026-11-20"
-Inject a Dependent Task:
+```
+
+## Inject a Dependent Task:
+
+```Bash
 pipenv run python main.py add-task --project "API Gateway" --title "Configure CORS Policies" --assignee "Alice"
-Flag a Task as Complete:
+```
+
+## Flag a Task as Complete:
+
+```Bash
 pipenv run python main.py complete-task --id "1"
 View All Projects:
 pipenv run python main.py list-projects

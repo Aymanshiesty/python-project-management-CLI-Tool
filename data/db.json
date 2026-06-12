@@ -1,0 +1,25 @@
+{
+  "users": {
+    "Alice": {
+      "name": "Ahmed",
+      "email": "Ahmed@dev.com"
+    }
+  },
+  "projects": {
+    "API Gateway": {
+      "title": "CLI tooling",
+      "description": "No description provided.",
+      "due_date": "2026-11-20",
+      "owner_name": "Ahmed"
+    }
+  },
+  "tasks": {
+    "1": {
+      "task_id": "1",
+      "project_title": "CLI tooling",
+      "title": "Configure CORS Policies",
+      "status": "Complete",
+      "assigned_to": "Ahmed"
+    }
+  }
+}

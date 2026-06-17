@@ -11,6 +11,42 @@
       "description": "No description provided.",
       "due_date": "2026-11-20",
       "owner_name": "ayman"
+    },
+    "project": {
+      "title": "project",
+      "description": "No description provided.",
+      "due_date": "2020-12-09",
+      "owner_name": "ayaan"
+    },
+    "teacher": {
+      "title": "teacher",
+      "description": "No description provided.",
+      "due_date": "2026-06-12",
+      "owner_name": "hamida"
+    },
+    "gamer": {
+      "title": "gamer",
+      "description": "No description provided.",
+      "due_date": "2026-11-20",
+      "owner_name": "hamida"
+    },
+    "econ": {
+      "title": "econ",
+      "description": "No description provided.",
+      "due_date": "2026-11-20",
+      "owner_name": "ayman"
+    },
+    "API": {
+      "title": "API",
+      "description": "No description provided.",
+      "due_date": "2026-11-20",
+      "owner_name": "ayman"
+    },
+    " Gateway": {
+      "title": " Gateway",
+      "description": "No description provided.",
+      "due_date": "2026-11-20",
+      "owner_name": "ayman"
     }
   },
   "tasks": {
@@ -19,6 +55,48 @@
       "project_title": "API Gateway",
       "title": "Configure CORS Policies",
       "status": "Complete",
+      "assigned_to": "ayman"
+    },
+    "2": {
+      "task_id": "2",
+      "project_title": "project",
+      "title": "Configure CORS Policies",
+      "status": "Complete",
+      "assigned_to": "ayaan"
+    },
+    "3": {
+      "task_id": "3",
+      "project_title": "teacher",
+      "title": "Configure CORS Policies",
+      "status": "Complete",
+      "assigned_to": "hamida"
+    },
+    "4": {
+      "task_id": "4",
+      "project_title": "gamer",
+      "title": "Configure CORS Policies",
+      "status": "Pending",
+      "assigned_to": "hamida"
+    },
+    "5": {
+      "task_id": "5",
+      "project_title": "API Gateway",
+      "title": "Configure CORS Policies",
+      "status": "Complete",
+      "assigned_to": "ayman"
+    },
+    "6": {
+      "task_id": "6",
+      "project_title": "API Gateway",
+      "title": "Configure CORS Policies",
+      "status": "Pending",
+      "assigned_to": "ayman"
+    },
+    "7": {
+      "task_id": "7",
+      "project_title": "API Gateway",
+      "title": "Configure CORS Policies",
+      "status": "Pending",
       "assigned_to": "ayman"
     }
   }

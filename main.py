@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+#!/usr/bin/env python3
 import sys
 import argparse
 from utils.storage import load_database, save_database
@@ -45,8 +46,12 @@ def run_cli():
     p_comp_task = subparsers.add_parser("complete-task", help="Flag an active task instance as complete.")
     p_comp_task.add_argument("--id", required=True, help="Target Integer tracking code identity.")
 
-    args = parser.parse_parse = parser.parse_args()
-    
+    # --- SUBCOMMAND: delete-user ---
+    p_del_user = subparsers.add_parser("delete-user", help="Remove a user from the system.")
+    p_del_user.add_argument("--username", required=True, help="Username of the account to delete.")
+
+    args = parser.parse_args()
+
     # Load database state
     db = load_database()
 
@@ -118,7 +123,15 @@ def run_cli():
         db["tasks"][args.id].mark_complete()
         save_database(db)
         console.print(f"[bold green]Success:[/bold green] Task #{args.id} updated to complete status.")
-        
+
+    elif args.command == "delete-user":
+        if args.username not in db["users"]:
+            console.print(f"[bold red] Error:[/bold red] User '{args.username}' not found.")
+            sys.exit(1)
+        del db["users"][args.username]
+        save_database(db)
+        console.print(f"[bold green]Success:[/bold green] User '{args.username}' has been deleted.")
+
     else:
         parser.print_help()
 
